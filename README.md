@@ -1,2 +1,2 @@
-# Receitas_F-cil
-App receitas fácil
+# Receita Facil
+App receita fácil
