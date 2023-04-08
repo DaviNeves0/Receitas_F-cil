@@ -1,8 +1,10 @@
-import {NativeBaseProvider, Box} from 'native-base'
+import {NativeBaseProvider} from 'native-base'
 import theme from './src/utils/theme';
 import { useFonts } from 'expo-font';
 import { NavigationContainer } from '@react-navigation/native';
 import Routes from './src/routes';
+import { StatusBar } from 'react-native';
+import { Platform } from 'react-native';
 
 
 export default function App() {
@@ -20,6 +22,9 @@ export default function App() {
   return (
     <NativeBaseProvider theme={theme}>
       <NavigationContainer>
+          <StatusBar barStyle={
+            Platform.OS === 'ios' ? 'dark-content' : 'light-content'
+            } />
           <Routes/>
       </NavigationContainer>
     </NativeBaseProvider>
